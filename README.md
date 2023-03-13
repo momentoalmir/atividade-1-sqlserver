@@ -1,6 +1,6 @@
 # Atividade 1: SQL Server
 
-O código apresentado é um conjunto de comandos DDL (Data Definition Language) em SQL Server para a criação de quatro tabelas em um banco de dados. As tabelas são: Cliente, Apolice, Carro e Sinistro.
+O código apresentado é um conjunto de comandos DDL (Data Definition Language) em SQL Server para a criação de quatro tabelas em um banco de dados. As tabelas são: Cliente, Apolice, Carro e Sinistro. Atividade realizada para FATEC Itapira, matéria de Banco de Dados, professor: Mateus Guilherme Fuini.
 
 ## Cliente
 
@@ -26,7 +26,7 @@ TelefoneCelular Varchar(45)
 A tabela Apolice armazena informações sobre as apólices de seguro dos clientes. Cada apólice é identificada por um número único CodApolice. Além disso, a tabela possui outras colunas, como ValorCobertura, ValorFranquia, DataInicioVigencia, DataFimVigencia, Cliente_CodCliente e Carro_CodCarro, que armazenam informações sobre a cobertura do seguro, vigência da apólice, e quais carros e clientes estão associados a cada apólice. As colunas Cliente_CodCliente e Carro_CodCarro são chaves estrangeiras que se relacionam com a tabela Cliente e Carro, respectivamente.
 
 ```sql
-Apolice
+-- Apolice
 CodApolice INT
 ValorCobertura DECIMAL
 ValorFranquia DECIMAL
@@ -41,7 +41,7 @@ Carro_CodCarro INT
 A tabela Carro contém informações sobre os carros dos clientes da seguradora. Cada carro é identificado por um número único CodCarro. Além disso, a tabela possui outras colunas, como Placa, Marca, Modelo, Ano, Chassi e Cor, que armazenam informações sobre o carro de cada cliente.
 
 ```sql
-Carro
+-- Carro
 CodCarro INT
 Placa VARCHAR(45)
 Marca VARCHAR(45)
@@ -57,7 +57,7 @@ Cor VARCHAR(45)
 Por fim, a tabela Sinistro armazena informações sobre os sinistros envolvendo os carros dos clientes. Cada sinistro é identificado por um número único CodSinistro. Além disso, a tabela possui outras colunas, como HoraSinistro, DataSinistro, LocalSinistro, Condutor e Carro_CodCarro, que armazenam informações sobre o horário, data, local, condutor e qual carro está envolvido em cada sinistro. A coluna Carro_CodCarro é uma chave estrangeira que se relaciona com a tabela Carro.
 
 ```sql
-Sinistro
+-- Sinistro
 CodSinistro INT
 HoraSinistro Int
 DataSinistro DATE
@@ -65,7 +65,3 @@ LocalSinistro VARCHAR(45)
 Condutor VARCHAR(45)
 Carro_CodCarro INT
 ```
-
-Essas tabelas formam a base de dados de uma seguradora, permitindo que informações importantes sobre clientes, apólices, carros e sinistros sejam armazenadas e acessadas com facilidade.
-
-Atividade realizada para FATEC Itapira, matéria de Banco de Dados, professor: Mateus Guilherme Fuini.

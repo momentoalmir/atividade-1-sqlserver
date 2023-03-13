@@ -17,12 +17,13 @@ CREATE TABLE Cliente (
 
 CREATE TABLE Apolice (
     CodApolice INT PRIMARY KEY,
-    ValorCobertura DECIMAL,
-    ValorFranquia DECIMAL,
-    DataInicioVigencia DATE,
-    DataFimVigencia DATE,
-    Cliente_CodCliente INT,
-    Carro_CodCarro INT,
+    ValorCobertura DECIMAL NOT NULL,
+    ValorFranquia DECIMAL NOT NULL,
+    DataInicioVigencia DATE NOT NULL,
+    DataFimVigencia DATE NOT NULL,
+    Cliente_CodCliente INT NOT NULL,
+    Carro_CodCarro INT NOT NULL,
+    CONSTRAINT chk_dataInicioVigencia CHECK (DataInicioVigencia >= SYSDATETIME()),
     FOREIGN KEY (Cliente_CodCliente) REFERENCES Cliente(CodCliente),
     FOREIGN KEY (Carro_CodCarro) REFERENCES Carro(CodCarro)
 );

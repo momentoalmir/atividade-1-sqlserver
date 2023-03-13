@@ -1,4 +1,5 @@
 CREATE DATABASE seguradora;
+USE seguradora;
 
 CREATE TABLE Cliente (
     CodCliente INT PRIMARY KEY,

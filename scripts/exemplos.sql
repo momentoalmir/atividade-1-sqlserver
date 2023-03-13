@@ -1,3 +1,5 @@
+USE seguradora;
+
 -- Inserir cliente
 INSERT INTO Cliente (CodCliente, Nome, CPF, Sexo, Estado, Cidade, Bairro, Numero, Rua, TelefoneFixo, TelefoneCelular)
 VALUES (1, 'Maria Silva', '111.111.111-11', 'Feminino', 'São Paulo', 'Itapira', 'Centro', '100', 'Rua A', '1111-1111', '99999-9999');

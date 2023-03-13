@@ -67,3 +67,5 @@ Carro_CodCarro INT
 ```
 
 Essas tabelas formam a base de dados de uma seguradora, permitindo que informações importantes sobre clientes, apólices, carros e sinistros sejam armazenadas e acessadas com facilidade.
+
+Atividade realizada para FATEC Itapira, matéria de Banco de Dados, professor: Mateus Guilherme Fuini.

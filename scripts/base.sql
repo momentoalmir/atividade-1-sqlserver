@@ -15,19 +15,6 @@ CREATE TABLE Cliente (
     TelefoneCelular VARCHAR(45) UNIQUE NOT NULL
 );
 
-CREATE TABLE Apolice (
-    CodApolice INT PRIMARY KEY,
-    ValorCobertura DECIMAL NOT NULL,
-    ValorFranquia DECIMAL NOT NULL,
-    DataInicioVigencia DATE NOT NULL,
-    DataFimVigencia DATE NOT NULL,
-    Cliente_CodCliente INT NOT NULL,
-    Carro_CodCarro INT NOT NULL,
-    CONSTRAINT chk_dataInicioVigencia CHECK (DataInicioVigencia >= GETDATE()),
-    FOREIGN KEY (Cliente_CodCliente) REFERENCES Cliente(CodCliente),
-    FOREIGN KEY (Carro_CodCarro) REFERENCES Carro(CodCarro)
-);
-
 CREATE TABLE Carro (
     CodCarro INT PRIMARY KEY,
     Placa VARCHAR(45),
@@ -38,6 +25,19 @@ CREATE TABLE Carro (
     Cor VARCHAR(45)
 );
 
+CREATE TABLE Apolice (
+    CodApolice INT PRIMARY KEY,
+    ValorCobertura DECIMAL NOT NULL,
+    ValorFranquia DECIMAL NOT NULL,
+    DataInicioVigencia DATE NOT NULL,
+    DataFimVigencia DATE NOT NULL,
+    Cliente_CodCliente INT NOT NULL,
+    Carro_CodCarro INT NOT NULL,
+    CONSTRAINT chk_dataInicioVigencia CHECK (DataInicioVigencia >= GETDATE()),
+    FOREIGN KEY (Cliente_CodCliente) REFERENCES Cliente(CodCliente),
+    FOREIGN KEY (Carro_CodCarro) REFERENCES Carro (CodCarro)
+);
+
 CREATE TABLE Sinistro (
     CodSinistro INT,
     HoraSinistro INT,
@@ -45,6 +45,6 @@ CREATE TABLE Sinistro (
     LocalSinistro VARCHAR(45),
     Condutor VARCHAR(45),
     Carro_CodCarro INT,
-    CONSTRAINT pk_sinistro PRIMARY KEY (CodSinistro, Carro_CodCarro),
+    PRIMARY KEY (CodSinistro, Carro_CodCarro),
     FOREIGN KEY (Carro_CodCarro) REFERENCES Carro(CodCarro)
 );

@@ -2,6 +2,8 @@
 
 O código apresentado é um conjunto de comandos DDL (Data Definition Language) em SQL Server para a criação de quatro tabelas em um banco de dados. As tabelas são: Cliente, Apolice, Carro e Sinistro. Atividade realizada para FATEC Itapira, matéria de Banco de Dados, professor: Mateus Guilherme Fuini.
 
+![Modelo entidade relacionamento](./img/mer.png)
+
 ## Cliente
 
 A tabela Cliente contém informações sobre os clientes da seguradora. Ela possui uma chave primária CodCliente, que identifica de forma única cada cliente. Além disso, a tabela possui outras colunas, como Nome, CPF, Sexo, Estado, Cidade, Bairro, Numero, Rua, TelefoneFixo e TelefoneCelular, que armazenam informações pessoais e de contato dos clientes. Algumas colunas possuem restrições, como a coluna Nome que não pode ser nula (NOT NULL), e as colunas CPF e TelefoneCelular que devem ser únicas (UNIQUE). A coluna Cidade possui um valor padrão definido como 'Itapira', ou seja, caso a informação não seja fornecida, esse será o valor padrão atribuído.

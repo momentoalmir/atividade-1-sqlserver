@@ -91,6 +91,7 @@ Tabela Apólice:
 
     Coluna com checagem:
         DataInicioVigencia: Maior que a data atual
+
 Tabela Carro:
     Chave Primária: CodCarro
 

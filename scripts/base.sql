@@ -39,11 +39,12 @@ CREATE TABLE Carro (
 );
 
 CREATE TABLE Sinistro (
-    CodSinistro INT PRIMARY KEY,
+    CodSinistro INT,
     HoraSinistro INT,
     DataSinistro DATE,
     LocalSinistro VARCHAR(45),
     Condutor VARCHAR(45),
     Carro_CodCarro INT,
+    CONSTRAINT pk_sinistro PRIMARY KEY (CodSinistro, Carro_CodCarro),
     FOREIGN KEY (Carro_CodCarro) REFERENCES Carro(CodCarro)
 );

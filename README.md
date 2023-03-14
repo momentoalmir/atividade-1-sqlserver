@@ -78,7 +78,7 @@ Tabela Clientes:
 
     Colunas Únicas: CPF, TelefoneCelular
 
-    Coluna com valor padrão:Cidade –Valor Padrão ‘Itapira’
+    Coluna com valor padrão: Cidade – Valor Padrão ‘Itapira’
 
 Tabela Apólice:
     Chave Primária: CodApolice
